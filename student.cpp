@@ -1,3 +1,5 @@
+// Simple Student Class
+
 #include <iostream>
 using namespace std;
 
@@ -5,9 +7,6 @@ class student{
 private:
     string name;
     float deg[6];
-    
-    
-    
 public:
     student(){
         
@@ -34,7 +33,6 @@ public:
     string getName(){
         return name;
     }
-    
     
 };
 
