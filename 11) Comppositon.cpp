@@ -2,59 +2,53 @@
 #include <iostream>
 using namespace std;
 
-class product
-{
+class point{
+    private:
+        int x, y;
+    public:
+        point(){
+            cout << "Enter point coordinates: ";
+            cin >> x >> y;
+        }
+
+        point(int x, int y){
+            this->x = x;
+            this->y = y;
+        }
+    
+    int getX(){
+        return x;
+    }
+    
+    int getY(){
+        return y;
+    }
+    
+    void printPoint(){
+        cout << x <<" "<< y << endl;
+    }
+    
+};
+
+class line{
 private:
-    string name;
-    int id;
-    int price;
-
+    point startPoint, endPoint;
 public:
-    product(string name, int id, int price)
-    {
-        this->name = name;
-        this->id = id;
-        this->price = price;
+    void printLine1(){
+        cout << startPoint.getX() <<" "<< startPoint.getY() << endl;
+        
+        cout << endPoint.getX()<< " "<< endPoint.getY() << endl;
+    }
+    
+    void printLine2(){
+        startPoint.printPoint();
+        endPoint.printPoint();
     }
 
-    product()
-    {
-        cout << "Enter product information: ";
-        cin >> name >> id >> price;
-    }
-
-    void print()
-    {
-        cout << name << " " << id << " " << price << endl;
-    }
-
-    void setPrice()
-    {
-        price += 1000;
-    }
 };
 
 int main()
 {
-
-    product p[5] = {
-        product("kitkat", 224, 500),
-        product("milk", 56, 1500),
-        product("water", 567, 250),
-        product("bread", 10, 1000),
-        product("perfume", 1760, 10000),
-    };
-
-    for (int i = 0; i < 5; i++)
-        p[i].print();
-
-    cout << "-----------\n";
-
-    for (int i = 0; i < 5; i++)
-        p[i].setPrice();
-
-    for (int i = 0; i < 5; i++)
-        p[i].print();
-
-    cout << "-----------\n";
+    line L1;
+    L1.printLine2();
 }
