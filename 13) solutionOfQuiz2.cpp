@@ -8,7 +8,7 @@ class square;
 class circle{
 private:
     int radius;
-    const int pi=3.14;
+    const float pi=3.14;
 public:
     circle(){
         cout << "Enter radius value: ";
