@@ -14,11 +14,11 @@ public:
         cout << "Enter radius value: ";
         cin >> radius;
     }
-    int area(){
+    float area(){
         return pi*radius*radius;
     }
     
-    friend int sum(square, square, circle, circle);
+    friend float sum(square, square, circle, circle);
 };
 
 class square{
@@ -29,10 +29,10 @@ public:
         cout << "Enter square length: ";
         cin >> length;
     }
-    int area(){
+    float area(){
         return length*length;
     }
-    friend int sum(square, square, circle, circle);
+    friend float sum(square, square, circle, circle);
 };
 
 int main()
@@ -43,7 +43,7 @@ int main()
     cout << "Total area: " << sum(s1, s2, c1, c2) << endl;
 }
 
-int sum(square s1, square s2, circle c1, circle c2){
-    int s = s1.area() + s2.area() + c1.area() + c2.area();
+float sum(square s1, square s2, circle c1, circle c2){
+    float s = s1.area() + s2.area() + c1.area() + c2.area();
     return s;
 }
