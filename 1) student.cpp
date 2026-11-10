@@ -6,13 +6,14 @@ class student
 {
 private:
     string name;
+    int age;
     float deg[6];
 
 public:
     student()
     {
-        cout << "Enter student name: ";
-        cin >> name;
+        cout << "Enter students name: ";
+        cin >> name>> age;
 
         for (int i = 0; i < 6; i++)
         {
@@ -36,6 +37,10 @@ public:
     string getName()
     {
         return name;
+    }
+
+    int getAge(){
+        return age;
     }
 };
 
