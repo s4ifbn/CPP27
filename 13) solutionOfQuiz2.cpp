@@ -4,6 +4,7 @@
 
 #include <iostream>
 using namespace std;
+class square;
 class circle{
 private:
     int radius;
@@ -16,6 +17,8 @@ public:
     int area(){
         return pi*radius*radius;
     }
+    
+    friend int sum(square, square, circle, circle);
 };
 
 class square{
@@ -29,14 +32,18 @@ public:
     int area(){
         return length*length;
     }
+    friend int sum(square, square, circle, circle);
 };
 
 int main()
 {
     circle c1, c2;
     square s1, s2;
+        
+    cout << "Total area: " << sum(s1, s2, c1, c2) << endl;
+}
 
-    int sum = c1.area() + c2.area() + s1.area() + s2.area();
-    
-    cout << "Total area: " << sum << endl;
+int sum(square s1, square s2, circle c1, circle c2){
+    int s = s1.area() + s2.area() + c1.area() + c2.area();
+    return s;
 }
