@@ -35,7 +35,7 @@ int main()
 {
     circle c1, c2;
     square s1, s2;
-    
+
     int sum = c1.area() + c2.area() + s1.area() + s2.area();
     
     cout << "Total area: " << sum << endl;
