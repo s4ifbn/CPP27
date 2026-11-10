@@ -1,5 +1,4 @@
-// array of objects example
-
+// composition example 2
 #include <iostream>
 using namespace std;
 
