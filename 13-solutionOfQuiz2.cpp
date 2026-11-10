@@ -1,6 +1,6 @@
 // Write an OOP program in C++ to calculate the summation of
 // areas of two circles and two squares, using friend function.
-// Quiz two solution:
+// Quiz 2 solution:
 
 #include <iostream>
 using namespace std;
