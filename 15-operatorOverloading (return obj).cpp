@@ -1,4 +1,4 @@
-// Simple Student Class with Getters
+// Binary operator overloading with object return
 #include <iostream>
 using namespace std;
 
